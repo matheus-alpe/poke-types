@@ -3,21 +3,19 @@ import { pokeApi } from '../http'
 import reactLogo from '../assets/react.svg'
 import './App.css'
 
-interface types {
-  name: string
-}
+import Autocomplete from '../components/Autocomplete'
 
 let firstRender = true
 
 function App() {
   const [count, setCount] = useState(0)
-  const [types, setTypes] = useState<types[]>([])
+  const [types, setTypes] = useState<IPokeType[]>([])
 
   async function callback() {
     try {
-      const response = await pokeApi.get(`type/${count}`)
-      setTypes((actualTypes) => {
-        actualTypes.push(response.data)
+      const { data }: { data: IPokeType } = await pokeApi.get(`type/fire`)
+      setTypes((actualTypes: IPokeType[]) => {
+        actualTypes.push(data)
         return actualTypes
       })
     } catch (error) {
@@ -26,25 +24,20 @@ function App() {
   }
 
   useEffect(() => {
-    if (firstRender) {
-      firstRender = false
-      return
-    }
-
     callback()
   }, [count])
 
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1>Vite + React</h1>
+
+      <Autocomplete />
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
