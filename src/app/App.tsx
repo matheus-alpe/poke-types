@@ -1,9 +1,11 @@
 // import { pokeApi } from '../http'
-import { POKE_TYPES } from '../utils'
+import { MAPPED_POKE_TYPES } from '../utils'
 import './App.css'
 
 import Autocomplete from '../components/Autocomplete'
 import Icon from '../components/Icon'
+
+const pokeTypes = Array.from(MAPPED_POKE_TYPES.values())
 
 function App() {
   return (
@@ -14,8 +16,8 @@ function App() {
 
       <div className="card">
         <ul>
-          {Object.values(POKE_TYPES).map((type: IPokeTypeStyle) => (
-            <li key={type.name}>
+          {pokeTypes.map((type: IPokeTypeStyle) => (
+            <li key={type.name + Date.now()}>
               <Icon name={type.name} />
               {type.name}
             </li>

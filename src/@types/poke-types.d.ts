@@ -39,7 +39,7 @@ interface IPokeType {
 }
 
 interface IPokeTypeStyle {
-  name: string
+  name: PokeTypeName
   icon: string
   color: string
 }
