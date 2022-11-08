@@ -1,93 +1,92 @@
-import bugIcon from '../assets/icons/icon_bug.png'
-import darkIcon from '../assets/icons/icon_dark.png'
-import dragonIcon from '../assets/icons/icon_dragon.png'
-import electricIcon from '../assets/icons/icon_electric.png'
-import fairyIcon from '../assets/icons/icon_fairy.png'
-import fightingIcon from '../assets/icons/icon_fighting.png'
-import fireIcon from '../assets/icons/icon_fire.png'
-import flyingIcon from '../assets/icons/icon_flying.png'
-import ghostIcon from '../assets/icons/icon_ghost.png'
-import grassIcon from '../assets/icons/icon_grass.png'
-import groundIcon from '../assets/icons/icon_ground.png'
-import iceIcon from '../assets/icons/icon_ice.png'
-import normalIcon from '../assets/icons/icon_normal.png'
-import poisonIcon from '../assets/icons/icon_poison.png'
-import psychicIcon from '../assets/icons/icon_psychic.png'
-import rockIcon from '../assets/icons/icon_rock.png'
-import steelIcon from '../assets/icons/icon_steel.png'
-import waterIcon from '../assets/icons/icon_water.png'
-
 export const POKE_TYPES = {
   bug: {
+    name: 'bug',
     color: '#a8c746',
-    url: bugIcon,
+    icon: 'icon_bug',
   },
   dark: {
+    name: 'dark',
     color: '#6d7381',
-    url: darkIcon,
+    icon: 'icon_dark',
   },
   dragon: {
+    name: 'dragon',
     color: '#0c81b9',
-    url: dragonIcon,
+    icon: 'icon_dragon',
   },
   electric: {
+    name: 'electric',
     color: '#f9de75',
-    url: electricIcon,
+    icon: 'icon_electric',
   },
   fairy: {
+    name: 'fairy',
     color: '#f2a7e2',
-    url: fairyIcon,
+    icon: 'icon_fairy',
   },
   fighting: {
+    name: 'fighting',
     color: '#e14751',
-    url: fightingIcon,
+    icon: 'icon_fighting',
   },
   fire: {
+    name: 'fire',
     color: '#feac58',
-    url: fireIcon,
+    icon: 'icon_fire',
   },
   flying: {
+    name: 'flying',
     color: '#a4bfeb',
-    url: flyingIcon,
+    icon: 'icon_flying',
   },
   ghost: {
+    name: 'ghost',
     color: '#7972d1',
-    url: ghostIcon,
+    icon: 'icon_ghost',
   },
   grass: {
+    name: 'grass',
     color: '#5cc27d',
-    url: grassIcon,
+    icon: 'icon_grass',
   },
   ground: {
+    name: 'ground',
     color: '#d4966b',
-    url: groundIcon,
+    icon: 'icon_ground',
   },
   ice: {
+    name: 'ice',
     color: '#8fdad4',
-    url: iceIcon,
+    icon: 'icon_ice',
   },
   normal: {
+    name: 'normal',
     color: '#a4a49f',
-    url: normalIcon,
+    icon: 'icon_normal',
   },
   poison: {
+    name: 'poison',
     color: '#c362d0',
-    url: poisonIcon,
+    icon: 'icon_poison',
   },
   psychic: {
+    name: 'psychic',
     color: '#fca199',
-    url: psychicIcon,
+    icon: 'icon_psychic',
   },
   rock: {
+    name: 'rock',
     color: '#d5ca96',
-    url: rockIcon,
+    icon: 'icon_rock',
   },
   steel: {
+    name: 'steel',
     color: '#57a8a9',
-    url: steelIcon,
+    icon: 'icon_steel',
   },
   water: {
+    name: 'water',
     color: '#6ebee0',
-    url: waterIcon,
+    icon: 'icon_water',
   },
 }

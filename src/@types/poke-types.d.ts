@@ -37,3 +37,9 @@ interface IPokeType {
   name: PokeTypeName
   damage_relations: IDamageRelations
 }
+
+interface IPokeTypeStyle {
+  name: string
+  icon: string
+  color: string
+}
