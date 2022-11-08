@@ -4,16 +4,17 @@ import reactLogo from '../assets/react.svg'
 import './App.css'
 
 import Autocomplete from '../components/Autocomplete'
+import { POKE_TYPES } from '../utils'
 
 let firstRender = true
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
   const [types, setTypes] = useState<IPokeType[]>([])
 
   async function callback() {
     try {
-      const { data }: { data: IPokeType } = await pokeApi.get(`type/fire`)
+      const { data }: { data: IPokeType } = await pokeApi.get(`type/${count}`)
       setTypes((actualTypes: IPokeType[]) => {
         actualTypes.push(data)
         return actualTypes
@@ -44,7 +45,14 @@ function App() {
         </button>
         <ul>
           {types.map((type) => (
-            <li key={type.name}>{type.name}</li>
+            <li key={type.name}>
+              <img
+                src={POKE_TYPES[type.name].url}
+                className="icon-type"
+                alt={`${type.name} icon`}
+              />
+              {type.name}
+            </li>
           ))}
         </ul>
       </div>

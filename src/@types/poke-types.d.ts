@@ -37,7 +37,3 @@ interface IPokeType {
   name: PokeTypeName
   damage_relations: IDamageRelations
 }
-
-type IPokeTypeColor = {
-  [key: PokeTypeName]: string
-}
