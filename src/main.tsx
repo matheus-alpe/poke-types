@@ -4,11 +4,13 @@ import App from './app/App'
 import './index.css'
 
 import { BrowserRouter } from 'react-router-dom'
+import Routes from './router'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <Routes />
     </BrowserRouter>
   </React.StrictMode>
 )
