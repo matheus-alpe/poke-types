@@ -1,15 +1,18 @@
 @mixin light {
   --primary: #ffffff;
   --secondary: #213547;
+  --card-bg: rgba(255, 255, 255, .6);
 }
 
 @mixin dark {
   --primary: #242424;
   --secondary: rgba(255, 255, 255, 0.87);
+  --card-bg: rgba(24, 24, 24, .6);
 }
 
 :root {
   @include light;
+  --border-radius: 20px;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1rem;
