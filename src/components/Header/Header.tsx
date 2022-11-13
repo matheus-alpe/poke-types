@@ -1,12 +1,11 @@
 // import { pokeApi } from '../http'
-import { MAPPED_POKE_TYPES } from '../utils'
-import './App.css'
+import { MAPPED_POKE_TYPES } from '../../utils'
 
-import TypeLink from '../components/TypeLink'
+import TypeLink from '../TypeLink'
 
 const pokeTypes = Array.from(MAPPED_POKE_TYPES.values())
 
-function App() {
+export default function Header() {
   return (
     <div className="App">
       <h1>Poke Stats</h1>
@@ -19,5 +18,3 @@ function App() {
     </div>
   )
 }
-
-export default App
