@@ -1,12 +1,12 @@
-import { MAPPED_POKE_TYPES, useIcon } from '../../utils'
+import { useIcon } from '../../utils'
 
 interface Props {
-  name: PokeTypeName
+  name: String
+  icon: string
 }
 
-export default function Icon({ name }: Props) {
-  const typeStyle = MAPPED_POKE_TYPES.get(name) as IPokeTypeStyle
-  const { error, image, loading } = useIcon(typeStyle.icon)
+export default function Icon({ name, icon }: Props) {
+  const { error, image, loading } = useIcon(icon)
 
   if (error) return <span>(404 - icon)</span>
 
