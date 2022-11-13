@@ -1,15 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 
-import TypesPage from '../pages/Types'
-import NotFoundPage from '../pages/NotFound'
-
-import TypeInfo from '../components/TypeInfo'
+import HomePage from '../pages/home'
+import TypesPage from '../pages/types'
+import TypeInfoPage from '../pages/type-info'
+import NotFoundPage from '../pages/not-found'
 
 export default function Router() {
   return (
     <Routes>
+      <Route path="/" element={<HomePage />} />
       <Route path="types" element={<TypesPage />}>
-        <Route path=":typeName" element={<TypeInfo />} />
+        <Route path=":typeName" element={<TypeInfoPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
