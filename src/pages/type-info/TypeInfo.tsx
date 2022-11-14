@@ -3,7 +3,6 @@ import { CSSProperties, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { MAPPED_POKE_TYPES } from '../../utils'
 
-import TypeLink from '../../components/TypeLink'
 import { CardActions, CardBody, CardHeader } from './components'
 
 export default function TypeInfoPage() {
