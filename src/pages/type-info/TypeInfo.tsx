@@ -8,7 +8,7 @@ import Type from '../../components/TypeLink'
 
 export default function TypeInfoPage() {
   const navigate = useNavigate()
-  const { typeName = '' } = useParams()
+  const { typeName = 'bug' } = useParams<{ typeName: PokeTypeName }>()
   const type = MAPPED_POKE_TYPES.get(typeName)
 
   useEffect(() => {
@@ -24,17 +24,13 @@ export default function TypeInfoPage() {
     <div className="type-info" style={styleColor}>
       <div className="card">
         <div className="header">
-          <Icon name={type.name} icon={type.icon} />
+          <Icon type="image" name={type.name} path={type.icon} />
           {type.name}
         </div>
 
         {/* TODO: implement card */}
         <div className="body">
-          <p>Double damage to:</p>
-          <ul>
-            <Icon name={'dragon'} icon={'icon_dragon'} />
-            <Icon name={'dark'} icon={'icon_dark'} />
-          </ul>
+          <Icon type="icon" name="close" title="Close" />
         </div>
       </div>
     </div>

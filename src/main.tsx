@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import 'material-icons/iconfont/round.css' // Icons List: https://marella.me/material-icons/demo/#round
 import './scss/index.scss'
 
 import { BrowserRouter } from 'react-router-dom'
