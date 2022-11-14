@@ -1,10 +1,29 @@
-export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
+import bugIcon from '../assets/icons/icon_bug.png'
+import darkIcon from '../assets/icons/icon_dark.png'
+import dragonIcon from '../assets/icons/icon_dragon.png'
+import electricIcon from '../assets/icons/icon_electric.png'
+import fairyIcon from '../assets/icons/icon_fairy.png'
+import fightingIcon from '../assets/icons/icon_fighting.png'
+import fireIcon from '../assets/icons/icon_fire.png'
+import flyingIcon from '../assets/icons/icon_flying.png'
+import ghostIcon from '../assets/icons/icon_ghost.png'
+import grassIcon from '../assets/icons/icon_grass.png'
+import groundIcon from '../assets/icons/icon_ground.png'
+import iceIcon from '../assets/icons/icon_ice.png'
+import normalIcon from '../assets/icons/icon_normal.png'
+import poisonIcon from '../assets/icons/icon_poison.png'
+import psychicIcon from '../assets/icons/icon_psychic.png'
+import rockIcon from '../assets/icons/icon_rock.png'
+import steelIcon from '../assets/icons/icon_steel.png'
+import waterIcon from '../assets/icons/icon_water.png'
+
+export const MAPPED_POKE_TYPES = new Map<PokeTypeName, IPokeTypeStyle>([
   [
     'bug',
     {
       name: 'bug',
       color: '#a8c746',
-      icon: 'icon_bug',
+      icon: bugIcon,
     },
   ],
   [
@@ -12,7 +31,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'dark',
       color: '#6d7381',
-      icon: 'icon_dark',
+      icon: darkIcon,
     },
   ],
   [
@@ -20,7 +39,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'dragon',
       color: '#0c81b9',
-      icon: 'icon_dragon',
+      icon: dragonIcon,
     },
   ],
   [
@@ -28,7 +47,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'electric',
       color: '#f9de75',
-      icon: 'icon_electric',
+      icon: electricIcon,
     },
   ],
   [
@@ -36,7 +55,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'fairy',
       color: '#f2a7e2',
-      icon: 'icon_fairy',
+      icon: fairyIcon,
     },
   ],
   [
@@ -44,7 +63,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'fighting',
       color: '#e14751',
-      icon: 'icon_fighting',
+      icon: fightingIcon,
     },
   ],
   [
@@ -52,7 +71,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'fire',
       color: '#feac58',
-      icon: 'icon_fire',
+      icon: fireIcon,
     },
   ],
   [
@@ -60,7 +79,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'flying',
       color: '#a4bfeb',
-      icon: 'icon_flying',
+      icon: flyingIcon,
     },
   ],
   [
@@ -68,7 +87,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'ghost',
       color: '#7972d1',
-      icon: 'icon_ghost',
+      icon: ghostIcon,
     },
   ],
   [
@@ -76,7 +95,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'grass',
       color: '#5cc27d',
-      icon: 'icon_grass',
+      icon: grassIcon,
     },
   ],
   [
@@ -84,7 +103,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'ground',
       color: '#d4966b',
-      icon: 'icon_ground',
+      icon: groundIcon,
     },
   ],
   [
@@ -92,7 +111,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'ice',
       color: '#8fdad4',
-      icon: 'icon_ice',
+      icon: iceIcon,
     },
   ],
   [
@@ -100,7 +119,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'normal',
       color: '#a4a49f',
-      icon: 'icon_normal',
+      icon: normalIcon,
     },
   ],
   [
@@ -108,7 +127,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'poison',
       color: '#c362d0',
-      icon: 'icon_poison',
+      icon: poisonIcon,
     },
   ],
   [
@@ -116,7 +135,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'psychic',
       color: '#fca199',
-      icon: 'icon_psychic',
+      icon: psychicIcon,
     },
   ],
   [
@@ -124,7 +143,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'rock',
       color: '#d5ca96',
-      icon: 'icon_rock',
+      icon: rockIcon,
     },
   ],
   [
@@ -132,7 +151,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'steel',
       color: '#57a8a9',
-      icon: 'icon_steel',
+      icon: steelIcon,
     },
   ],
   [
@@ -140,7 +159,7 @@ export const MAPPED_POKE_TYPES = new Map<string, IPokeTypeStyle>([
     {
       name: 'water',
       color: '#6ebee0',
-      icon: 'icon_water',
+      icon: waterIcon,
     },
   ],
 ])
