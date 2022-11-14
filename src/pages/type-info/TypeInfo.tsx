@@ -1,10 +1,11 @@
+import './TypeInfo.scss'
 import { CSSProperties, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 
 import { MAPPED_POKE_TYPES } from '../../utils'
 
 import Icon from '../../components/Icon'
-import Type from '../../components/TypeLink'
+import TypeLink from '../../components/TypeLink'
 
 export default function TypeInfoPage() {
   const navigate = useNavigate()
@@ -23,6 +24,12 @@ export default function TypeInfoPage() {
   return (
     <div className="type-info" style={styleColor}>
       <div className="card">
+        <div className="actions">
+          <Link to="/types" role="button">
+            <Icon type="icon" name="close" title="Close" />
+          </Link>
+        </div>
+
         <div className="header">
           <Icon type="image" name={type.name} path={type.icon} />
           {type.name}
@@ -30,7 +37,14 @@ export default function TypeInfoPage() {
 
         {/* TODO: implement card */}
         <div className="body">
-          <Icon type="icon" name="close" title="Close" />
+          <p>Double damage to:</p>
+          <ul>
+            {(['dragon', 'dark'] as PokeTypeName[]).map((typeName) => {
+              const type = MAPPED_POKE_TYPES.get(typeName)
+              if (!type) return
+              return <TypeLink type={type} key={type.name} />
+            })}
+          </ul>
         </div>
       </div>
     </div>

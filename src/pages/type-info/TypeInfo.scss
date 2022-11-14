@@ -4,6 +4,8 @@
   display: flex;
   position: absolute;
   inset: 10px;
+  max-width: 700px;
+  margin: 0 auto;
 
   &::before {
     content: '';
@@ -24,6 +26,12 @@
     border-radius: var(--border-radius);
     background-color: var(--card-bg);
     backdrop-filter: blur(50px);
+  }
+
+  .actions {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
   }
 
   .body {
