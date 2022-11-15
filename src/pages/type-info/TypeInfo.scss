@@ -1,37 +1,26 @@
 .type-info {
-  // --shadow-bg: var(--primary);
-  --shadow-bg: green;
-  display: flex;
-  position: absolute;
-  inset: 10px;
-  max-width: 700px;
-  margin: 0 auto;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 50vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 40vw 40vw var(--shadow-bg);
-    z-index: 0;
-  }
-
-  .card {
-    position: relative;
-    padding: 1rem;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--card-bg);
-    backdrop-filter: blur(50px);
-  }
 
   .actions {
     position: absolute;
-    right: .5rem;
-    top: .5rem;
+    left: 50%;
+    bottom: -2.5em;
+    transform: translateX(-50%);
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg);
+    backdrop-filter: blur(50px);
+
+    .icon {
+      opacity: .4;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .7em;
+    margin-bottom: 1em;
   }
 
   .body {

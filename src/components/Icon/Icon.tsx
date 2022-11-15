@@ -10,13 +10,13 @@ interface Props {
 export default function Icon({ name, type, path, ...attrs }: Props) {
   if (type === 'icon') {
     return (
-      <span className="material-icons-round" {...attrs}>
+      <span className="icon material-icons-round" {...attrs}>
         {name}
       </span>
     )
   }
 
   return (
-    <img src={path} className="icon-type" alt={`${name} icon`} {...attrs} />
+    <img src={path} className="icon-image" alt={`${name} icon`} {...attrs} />
   )
 }

@@ -1,0 +1,32 @@
+.card {
+  --shadow-bg: var(--primary);
+  display: flex;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  bottom: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40vw 40vw var(--shadow-bg);
+    z-index: 0;
+  }
+
+  .content {
+    position: relative;
+    padding: 1em;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg);
+    backdrop-filter: blur(15px);
+  }
+}

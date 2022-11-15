@@ -8,7 +8,7 @@ export default function CardHeader({ type }: Props) {
   return (
     <div className="header">
       <Icon type="image" name={type.name} path={type.icon} />
-      {type.name}
+      <h2>{type.name.toUpperCase()}</h2>
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import './TypeInfo.scss'
-import { CSSProperties, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { MAPPED_POKE_TYPES } from '../../utils'
 
+import Card from '../../components/Card'
 import { CardActions, CardBody, CardHeader } from './components'
 
 export default function TypeInfoPage() {
@@ -17,15 +18,11 @@ export default function TypeInfoPage() {
 
   if (!type) return <></>
 
-  const styleColor = { '--shadow-bg': type.color } as CSSProperties
-
   return (
-    <div className="type-info" style={styleColor}>
-      <div className="card">
-        <CardActions />
-        <CardHeader type={type} />
-        <CardBody type={type} />
-      </div>
-    </div>
+    <Card className="type-info" shadowColor={type.color}>
+      <CardActions />
+      <CardHeader type={type} />
+      <CardBody type={type} />
+    </Card>
   )
 }
