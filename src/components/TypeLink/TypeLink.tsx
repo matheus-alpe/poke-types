@@ -10,12 +10,7 @@ export default function TypeLink({ type }: Props) {
 
   return (
     <Link to={URL}>
-      <Icon
-        key={type.name + Date.now()}
-        name={type.name}
-        type="image"
-        path={type.icon}
-      />
+      <Icon key={type.name} name={type.name} type="image" path={type.icon} />
     </Link>
   )
 }

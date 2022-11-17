@@ -8,11 +8,11 @@ export const pokeApi = axios.create({
 export function useApi<T>(route: string): {
   loading: boolean
   error: any
-  state: T | undefined
+  state: T
 } {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<any>()
-  const [state, setState] = useState<T>()
+  const [state, setState] = useState<T>({} as T)
 
   const fetchData = async () => {
     try {

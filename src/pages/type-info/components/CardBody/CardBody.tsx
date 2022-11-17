@@ -2,6 +2,7 @@ import { MAPPED_POKE_TYPES } from '@/utils'
 import { useApi } from '@/http'
 
 import TypeLink from '@/components/TypeLink'
+import DamageSection from './DamageSection'
 
 interface Props {
   type: IPokeTypeStyle
@@ -26,18 +27,7 @@ export default function CardBody({ type }: Props) {
       {loading ? (
         <span>loading</span>
       ) : (
-        <>
-          <p>Double damage to:</p>
-          <ul>
-            {responseType?.damage_relations.double_damage_to.map(
-              (reducedType) => {
-                const type = MAPPED_POKE_TYPES.get(reducedType.name)
-                if (!type) return
-                return <TypeLink type={type} key={type.name} />
-              }
-            )}
-          </ul>
-        </>
+        <DamageSection damageRelations={responseType.damage_relations} />
       )}
     </div>
   )

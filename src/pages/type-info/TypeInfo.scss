@@ -1,4 +1,8 @@
 .type-info {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
 
   .actions {
     position: absolute;
@@ -28,8 +32,31 @@
   }
 
   .body {
-    img {
-      width: 40px;
+    overflow-y: auto;
+
+    .damage-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .damage-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+      }
+    }
+
+    .damage-item {
+
+      img {
+        width: 40px;
+      }
     }
   }
 }
