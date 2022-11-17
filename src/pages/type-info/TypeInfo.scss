@@ -21,6 +21,10 @@
     align-items: center;
     gap: .7em;
     margin-bottom: 1em;
+
+    h2 {
+      text-transform: capitalize;
+    }
   }
 
   .body {
