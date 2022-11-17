@@ -6,9 +6,12 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './router'
 
+import SwitchMode from '@/components/SwitchMode'
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
+      <SwitchMode />
       <Routes />
     </BrowserRouter>
   </React.StrictMode>

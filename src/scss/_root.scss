@@ -20,9 +20,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--secondary);
-  background-color: var(--primary);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,4 +31,13 @@
   :root {
     @include dark;
   }
+}
+
+body[theme="light"] {
+  @include light;
+}
+
+
+body[theme="dark"] {
+  @include dark;
 }
