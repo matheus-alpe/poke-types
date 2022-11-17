@@ -22,8 +22,7 @@ export default function SwitchMode() {
   }
 
   useEffect(() => {
-    const themeMode = storage.get('mode')
-    if (!themeMode) return
+    const themeMode = storage.get('mode') || mode
     setMode(themeMode)
     changeBodyTheme(themeMode)
   }, [])
