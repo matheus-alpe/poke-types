@@ -33,11 +33,36 @@
 
   .body {
     overflow-y: auto;
+    padding: 0 .5em;
 
     .damage-section {
       display: flex;
       flex-direction: column;
       gap: 15px;
+    }
+
+    .damage-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &.attack {
+        text-align: left;
+      }
+
+      &.defense {
+        text-align: right;
+
+        ul {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .damage-types {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
 
     .damage-list {
@@ -53,7 +78,6 @@
     }
 
     .damage-item {
-
       img {
         width: 40px;
       }

@@ -19,6 +19,8 @@ function ListDamage({
   title: string
   reducedTypes: IReducedPokeType[]
 }) {
+  if (!reducedTypes.length) return <></>
+
   return (
     <div className="damage-list">
       <p>{title}</p>
@@ -38,35 +40,47 @@ export default function DamageSection({
 }) {
   return (
     <div className="damage-section">
-      <ListDamage
-        title="Double damage to:"
-        reducedTypes={damageRelations.double_damage_to}
-      />
+      <div className="damage-group attack">
+        <h3>Attack</h3>
 
-      <ListDamage
-        title="Half damage to:"
-        reducedTypes={damageRelations.half_damage_to}
-      />
+        <div className="damage-types">
+          <ListDamage
+            title="Double damage to"
+            reducedTypes={damageRelations.double_damage_to}
+          />
 
-      <ListDamage
-        title="No damage to:"
-        reducedTypes={damageRelations.no_damage_to}
-      />
+          <ListDamage
+            title="Half damage to"
+            reducedTypes={damageRelations.half_damage_to}
+          />
 
-      <ListDamage
-        title="Double damage from:"
-        reducedTypes={damageRelations.double_damage_from}
-      />
+          <ListDamage
+            title="No damage to"
+            reducedTypes={damageRelations.no_damage_to}
+          />
+        </div>
+      </div>
 
-      <ListDamage
-        title="Half damage from:"
-        reducedTypes={damageRelations.half_damage_from}
-      />
+      <div className="damage-group defense">
+        <h3>Defense</h3>
 
-      <ListDamage
-        title="No damage from:"
-        reducedTypes={damageRelations.no_damage_from}
-      />
+        <div className="damage-types">
+          <ListDamage
+            title="Double damage from"
+            reducedTypes={damageRelations.double_damage_from}
+          />
+
+          <ListDamage
+            title="Half damage from"
+            reducedTypes={damageRelations.half_damage_from}
+          />
+
+          <ListDamage
+            title="No damage from"
+            reducedTypes={damageRelations.no_damage_from}
+          />
+        </div>
+      </div>
     </div>
   )
 }
