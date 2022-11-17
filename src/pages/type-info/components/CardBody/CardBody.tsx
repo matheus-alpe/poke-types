@@ -1,7 +1,5 @@
-import { MAPPED_POKE_TYPES } from '@/utils'
 import { useApi } from '@/http'
 
-import TypeLink from '@/components/TypeLink'
 import DamageSection from './DamageSection'
 
 interface Props {
