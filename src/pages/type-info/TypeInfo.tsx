@@ -1,9 +1,9 @@
 import './TypeInfo.scss'
 import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { MAPPED_POKE_TYPES } from '../../utils'
+import { MAPPED_POKE_TYPES } from '@/utils'
 
-import Card from '../../components/Card'
+import Card from '@/components/Card'
 import { CardActions, CardBody, CardHeader } from './components'
 
 export default function TypeInfoPage() {

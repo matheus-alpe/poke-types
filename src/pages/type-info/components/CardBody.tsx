@@ -1,6 +1,6 @@
-import { MAPPED_POKE_TYPES } from '../../../utils'
+import { MAPPED_POKE_TYPES } from '@/utils'
 
-import TypeLink from '../../../components/TypeLink'
+import TypeLink from '@/components/TypeLink'
 
 interface Props {
   type: IPokeTypeStyle
