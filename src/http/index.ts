@@ -1,8 +1,13 @@
 import axios from 'axios'
+import { setupCache, buildWebStorage } from 'axios-cache-interceptor'
 import { useEffect, useState } from 'react'
 
-export const pokeApi = axios.create({
+const AxiosInstance = axios.create({
   baseURL: 'https://pokeapi.co/api/v2/',
+})
+
+export const pokeApi = setupCache(AxiosInstance, {
+  storage: buildWebStorage(localStorage, 'axios-cache:')
 })
 
 export function useApi<T>(route: string): {
